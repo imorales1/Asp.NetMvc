@@ -19,12 +19,12 @@ namespace Usuarios.Areas.Usuario.Pages.Account
         public InputModel Input { get; set; }
         public class InputModel
         {
-            [Required]
-            [EmailAddress]
+            [Required(ErrorMessage = " El campo Email es obligatorio.")]
+            [EmailAddress] 
             [Display(Name = "Email")]
             public string Email { get; set; }
 
-            [Required]
+            [Required(ErrorMessage = "El campo Password es obligatorio.")]
             [DataType(DataType.Password)]
             [Display(Name = "Contraseña")]
             [StringLength(100, ErrorMessage = "El número de caracteres de {0} debe ser al menos {2}.", MinimumLength = 6)]
@@ -45,6 +45,7 @@ namespace Usuarios.Areas.Usuario.Pages.Account
             {
                 
             }
+
             var data = Input;
             return Page();        }
         }
