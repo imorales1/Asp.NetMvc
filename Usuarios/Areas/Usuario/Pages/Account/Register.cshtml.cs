@@ -8,9 +8,12 @@ using Microsoft.AspNetCore.Mvc.RazorPages;
 
 namespace Usuarios.Areas.Usuario.Pages.Account
 {
-    public class RegisterModel : PageModel
+    public class RegisterModel : PageModel     
     {
-        
+        public RegisterModel()
+        {
+                   
+        }
         public void OnGet()
         {
             
